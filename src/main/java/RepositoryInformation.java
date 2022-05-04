@@ -1,10 +1,10 @@
 
 public class RepositoryInformation {
-    public Repository[] repo;
+    public Repository[] value;
     public int count;
 
-    public RepositoryInformation(Repository[] repo, int count) {
-        this.repo = repo;
+    public RepositoryInformation(Repository[] value, int count) {
+        this.value = value;
         this.count = count;
     }
     public int GetCount(){

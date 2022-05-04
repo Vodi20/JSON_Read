@@ -3,13 +3,13 @@ public class Repository {
     private String id;
     private String name;
     private String url;
-    private Project[] project;
+    public Project project;
     private String defaultBranch;
     private String remoteUrl;
     private String sshUrl;
     private boolean isFork;
 
-    public Repository(String id, String name, String url, Project[] project, String defaultBranch, String remoteUrl, String sshUrl, boolean isFork) {
+    public Repository(String id, String name, String url, Project project, String defaultBranch, String remoteUrl, String sshUrl, boolean isFork) {
         this.id = id;
         this.name = name;
         this.url = url;
@@ -32,7 +32,7 @@ public class Repository {
         return url;
     }
 
-    public Project[] getProject() {
+    public Project getProject() {
         return project;
     }
 
