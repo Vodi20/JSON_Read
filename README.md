@@ -1,7 +1,8 @@
 # JSON_Read
-Program, welches eine JSON deserialisiert, mit der library gson
+Program, welches eine JSON deserialisiert, um dann aus den eingelesenen Daten filtern zu können.
+  Update: writetojson: gefilterte Ergebnisse können nun im Json-Format ausgegeben werden
 
-###gson
+### gson
   deserialisiert eine json-Datei genau so, wie man es in einer Klassenstruktur definiert hat.
   Class, welche sozusagen das erste json Array repräsentiert
   
