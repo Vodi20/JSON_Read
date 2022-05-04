@@ -84,4 +84,5 @@ public class Search {
         String search = sc.next();
         return search;
     }
+
 }

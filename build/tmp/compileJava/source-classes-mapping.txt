@@ -2,12 +2,12 @@ Project.java
  Project
 Repository.java
  Repository
-JSONHelper.java
- JSONHelper
 RepositoryInformation.java
  RepositoryInformation
 Search.java
  Search
+JSONHelper.java
+ JSONHelper
 Main.java
  Main
 DisplayHelper.java

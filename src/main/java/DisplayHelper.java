@@ -39,30 +39,37 @@ public class DisplayHelper {
                 case 1:
                     List<Repository> idlist = Search.filterId(search, rep);
                     displayObjects(idlist);
+                    JSONHelper.writeToJson(idlist);
                     break;
                 case 2:
                     List<Repository> namelist = Search.filterName(search, rep);
                     displayObjects(namelist);
+                    JSONHelper.writeToJson(namelist);
                     break;
                 case 3:
                     List<Repository> urllist = Search.filterUrl(search, rep);
                     displayObjects(urllist);
+                    JSONHelper.writeToJson(urllist);
                     break;
                 case 4:
                     List<Repository> defaultbranchlist = Search.filterDefaultBranch(search, rep);
                     displayObjects(defaultbranchlist);
+                    JSONHelper.writeToJson(defaultbranchlist);
                     break;
                 case 5:
                     List<Repository> remoteurllist = Search.filterRemoteUrl(search, rep);
                     displayObjects(remoteurllist);
+                    JSONHelper.writeToJson(remoteurllist);
                     break;
                 case 6:
                     List<Repository> sshurllist = Search.filterSshUrl(search, rep);
                     displayObjects(sshurllist);
+                    JSONHelper.writeToJson(sshurllist);
                     break;
                 case 7:
                     List<Repository> forklist = Search.filterFork(search, rep);
                     displayObjects(forklist);
+                    JSONHelper.writeToJson(forklist);
                     break;
                 case 8:
                     System.out.println("Das Program wird geschlossen!");
@@ -87,7 +94,7 @@ public class DisplayHelper {
         System.out.println(" remoteurl: "+repo.getRemoteUrl());
         System.out.println(" sshurl: "+repo.getSshUrl());
         System.out.println(" isfork: "+repo.isFork());
-
+        System.out.println("");
     }
 
 }
