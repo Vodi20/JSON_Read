@@ -1,14 +1,16 @@
-Project.java
- Project
-Repository.java
- Repository
-RepositoryInformation.java
- RepositoryInformation
-Search.java
- Search
 JSONHelper.java
  JSONHelper
-Main.java
- Main
+RepositoryInformation.java
+ RepositoryInformation
+Repository.java
+ Repository
+Project.java
+ Project
 DisplayHelper.java
  DisplayHelper
+Search.java
+ Search
+Main.java
+ Main
+Sort.java
+ Sort
