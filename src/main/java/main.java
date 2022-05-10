@@ -1,14 +1,15 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args){
-        String url = "C:\\Users\\Vodenik\\Desktop\\WMS Cardiff\\JSON_Read_newest\\src\\main\\java\\SampleJson.txt";
+        String url = "SampleJson.txt";
         RepositoryInformation rep = JSONHelper.gson(url);
         DisplayHelper.menu(rep);
+
+//        int[] intarr = {3,4,1,2,7,6};
+//
+//        intarr = Sort.quickSort(intarr, 0 ,5);
+//
+//        for (int i = 0; i < intarr.length; i++){
+//            System.out.println(intarr[i]);
+//        }
     }
 }

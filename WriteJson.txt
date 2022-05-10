@@ -1,0 +1,21 @@
+{
+  "value": [
+    {
+      "id": "219f7658-b875-45f8-a3d1-06c8aa4ce8e0",
+      "name": "ENTERPRISE-WALMART_NEXTGEN-KiSoft-One",
+      "url": "https://tfs05.knapp.at/KAG/_apis/git/repositories/219f7658-b875-45f8-a3d1-06c8aa4ce8e0",
+      "project": {
+        "id": "6fc5dd97-5cef-4f00-82de-e42ddd1bdbfa",
+        "name": "Customer Projects",
+        "url": "https://tfs05.knapp.at/KAG/_apis/projects/6fc5dd97-5cef-4f00-82de-e42ddd1bdbfa",
+        "state": "wellFormed",
+        "revision": 8810
+      },
+      "defaultBranch": "refs/heads/enterprise/MASTER",
+      "remoteUrl": "https://tfs.knapp.at/KAG/Customer%20Projects/_git/ENTERPRISE-WALMART_NEXTGEN-KiSoft-One",
+      "sshUrl": "ssh://tfs.knapp.at:22/KAG/Customer%20Projects/_git/ENTERPRISE-WALMART_NEXTGEN-KiSoft-One",
+      "isFork": true
+    }
+  ],
+  "count": 1
+}

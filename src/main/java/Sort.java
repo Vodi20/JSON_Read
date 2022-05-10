@@ -31,32 +31,20 @@ public class Sort {
     }
     public static int partition(int[] arr, int left, int right){
         int pivot = arr[right];
+        int i = left-1;
 
-        int i = left;
-        int j = right -1;
-        while(i<j) {
-            while (arr[i] < pivot) {
+        for(int j = left; j < right; j++){
+            if(arr[j] < pivot){
                 i++;
-            }
-            while (j > left && arr[j] > pivot) {
-                j--;
-            }
-            if (i < j) {
-                int now = arr[i];
-                arr[i] = arr[j];
-                arr[j] = now;
-                i++;
-                j--;
+                int now = arr[j];
+                arr[j] = arr[i];
+                arr[i] = now;
             }
         }
-        if (i == j && arr[i] < pivot){
-            i++;
-        }
-        if (arr[i] != pivot){
-            int now = arr[i];
-            arr[i] = arr[right];
-            arr[right] = now;
-        }
-        return i;
+        int now2 = arr[right];
+        arr[right] = arr[i+1];
+        arr[i+1] = now2;
+
+        return i+1;
     }
 }

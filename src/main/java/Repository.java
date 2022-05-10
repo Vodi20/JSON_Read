@@ -51,4 +51,18 @@ public class Repository {
     public boolean isFork() {
         return isFork;
     }
+
+    public static void displayRepository(Repository repo){
+
+        System.out.println(" id: "+repo.getId());
+        System.out.println(" name: "+repo.getName());
+        System.out.println(" url: "+repo.getUrl());
+        System.out.println(" project: ");
+        Project.displayProject(repo.project);
+        System.out.println(" defaultbranch: "+repo.getDefaultBranch());
+        System.out.println(" remoteurl: "+repo.getRemoteUrl());
+        System.out.println(" sshurl: "+repo.getSshUrl());
+        System.out.println(" isfork: "+repo.isFork());
+        System.out.println("");
+    }
 }

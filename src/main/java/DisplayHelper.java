@@ -2,12 +2,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DisplayHelper {
-    public static void displayObjects(List<Repository> repo){                   //displays objects from list
-        for (int i = 0 ; i < repo.size() ; i++){
-            System.out.println((i+1) + ". object: ");
-            displayRepository(repo.get(i));
-        }
-    }
+
 
     public static void displayMenu(){                                           //displays the menu
         System.out.println("--------------------");
@@ -37,64 +32,44 @@ public class DisplayHelper {
 
             switch (condition) {
                 case 1:
-                    List<Repository> idlist = Search.filterId(search, rep);
-                    displayObjects(idlist);
-                    JSONHelper.writeToJson(idlist);
+                    RepositoryInformation repo = Search.filterId(search, rep);
+                    RepositoryInformation.displayRepoInfo(repo);
+                    JSONHelper.writeToJson(repo);
                     break;
                 case 2:
-                    List<Repository> namelist = Search.filterName(search, rep);
-                    displayObjects(namelist);
-                    JSONHelper.writeToJson(namelist);
+                    RepositoryInformation repo2 = Search.filterName(search, rep);
+                    RepositoryInformation.displayRepoInfo(repo2);
+                    JSONHelper.writeToJson(repo2);
                     break;
                 case 3:
-                    List<Repository> urllist = Search.filterUrl(search, rep);
-                    displayObjects(urllist);
-                    JSONHelper.writeToJson(urllist);
+                    RepositoryInformation repo3 = Search.filterUrl(search, rep);
+                    RepositoryInformation.displayRepoInfo(repo3);
+                    JSONHelper.writeToJson(repo3);
                     break;
                 case 4:
-                    List<Repository> defaultbranchlist = Search.filterDefaultBranch(search, rep);
-                    displayObjects(defaultbranchlist);
-                    JSONHelper.writeToJson(defaultbranchlist);
+                    RepositoryInformation repo4 = Search.filterDefaultBranch(search, rep);
+                    RepositoryInformation.displayRepoInfo(repo4);
+                    JSONHelper.writeToJson(repo4);
                     break;
                 case 5:
-                    List<Repository> remoteurllist = Search.filterRemoteUrl(search, rep);
-                    displayObjects(remoteurllist);
-                    JSONHelper.writeToJson(remoteurllist);
+                    RepositoryInformation repo5 = Search.filterRemoteUrl(search, rep);
+                    RepositoryInformation.displayRepoInfo(repo5);
+                    JSONHelper.writeToJson(repo5);
                     break;
                 case 6:
-                    List<Repository> sshurllist = Search.filterSshUrl(search, rep);
-                    displayObjects(sshurllist);
-                    JSONHelper.writeToJson(sshurllist);
+                    RepositoryInformation repo6 = Search.filterSshUrl(search, rep);
+                    RepositoryInformation.displayRepoInfo(repo6);
+                    JSONHelper.writeToJson(repo6);
                     break;
                 case 7:
-                    List<Repository> forklist = Search.filterFork(search, rep);
-                    displayObjects(forklist);
-                    JSONHelper.writeToJson(forklist);
+                    RepositoryInformation repo7 = Search.filterFork(search, rep);
+                    RepositoryInformation.displayRepoInfo(repo7);
+                    JSONHelper.writeToJson(repo7);
                     break;
                 case 8:
                     System.out.println("Das Program wird geschlossen!");
             }
         }
-    }
-
-    private static void displayProject(Project proj){
-        System.out.println("  id: "+proj.getId());
-        System.out.println("  name: "+proj.getName());
-        System.out.println("  url: "+proj.getUrl());
-        System.out.println("  state: "+proj.getState());
-    }
-    public static void displayRepository(Repository repo){
-
-        System.out.println(" id: "+repo.getId());
-        System.out.println(" name: "+repo.getName());
-        System.out.println(" url: "+repo.getUrl());
-        System.out.println(" project: ");
-        displayProject(repo.project);
-        System.out.println(" defaultbranch: "+repo.getDefaultBranch());
-        System.out.println(" remoteurl: "+repo.getRemoteUrl());
-        System.out.println(" sshurl: "+repo.getSshUrl());
-        System.out.println(" isfork: "+repo.isFork());
-        System.out.println("");
     }
 
 }

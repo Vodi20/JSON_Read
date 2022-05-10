@@ -33,4 +33,11 @@ public class Project {
     public int getRevision() {
         return revision;
     }
+
+    public static void displayProject(Project proj){
+        System.out.println("  id: "+proj.getId());
+        System.out.println("  name: "+proj.getName());
+        System.out.println("  url: "+proj.getUrl());
+        System.out.println("  state: "+proj.getState());
+    }
 }
